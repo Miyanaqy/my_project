@@ -84,7 +84,7 @@ var slider={
     this.$left=parseFloat($(".contant-item_slider>ul").css("margin-left"));
     this.$rt=$(".contant-item_slider_button_right");
     this.$ul=$(".contant-item_slider>ul");
-    this.$rt.on("click","",e=>{
+    this.$rt.on("click",e=>{
         this.n++;
         this.$ul.css("margin-left",this.$left-this.$length*this.n);
          if (this.n>2) {
@@ -94,7 +94,7 @@ var slider={
         // console.log(this.n);
     });
     this.$lt=$(".contant-item_slider_button_left"); 
-    this.$lt.on("click","",e=>{
+    this.$lt.on("click",e=>{
         this.n--;
         this.$ul.css("margin-left",this.$left-this.$length*this.n);
         if (this.n<0) {
@@ -107,3 +107,24 @@ var slider={
   }
 }
 slider.change();
+
+
+var hover={
+	$li:null,
+	$button:null,
+	in(){
+		this.$li=$(".contant-item>li");
+		this.$button=$(".contant-item_slider_button");
+		this.$li.hover(
+				e=> {
+				this.$button.animate(
+					{opacity:1},500)
+				},
+				e=> {
+				this.$button.animate(
+					{opacity:0},500)
+				} 
+		)
+	}
+}
+hover.in();
