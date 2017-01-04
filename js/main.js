@@ -112,18 +112,32 @@ slider.change();
 var hover={
 	$li:null,
 	$button:null,
+	n:null,
 	in(){
+		var w=0;
 		this.$li=$(".contant-item>li");
+		$('.contant-item>li').on('mouseover',function(){
+			this.n= $(this).index();
+			console.log(this.n);
+			w=this.n;
+		})
+		
+		this.MOVE(w);
+	},
+
+	MOVE(n){
+		console.log(n);
 		this.$button=$(".contant-item_slider_button");
-		this.$li.hover(
+ 		$(".contant-item>li:eq("+n+")").hover(	
 				e=> {
-				this.$button.animate(
-					{opacity:1},500)
+					this.$button.stop().animate(
+					{opacity:1},200)
 				},
 				e=> {
-				this.$button.animate(
-					{opacity:0},500)
-				} 
+					this.$button.stop().animate(
+					{opacity:0},200)
+				}
+
 		)
 	}
 }
