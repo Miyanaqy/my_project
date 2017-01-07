@@ -64,11 +64,42 @@ var fade_slider={
 		});
 	},
  	change(num){ 
-	    $(".banner_slider").find("li").removeClass(".banner_slider").hide().eq(num).fadeIn(1000).addClass(".banner_slider");
+	    $(".banner_slider").find("li").hide().removeClass(".banner_slider").eq(num).fadeIn(500).addClass(".banner_slider");
 	    $(".banner_button").find("li").removeClass("banner_button_active").eq(num).addClass("banner_button_active");
   	},
 }
 fade_slider.autoChange();
+
+
+
+
+
+// 导航侧边弹出显示
+var nav_pump={
+	$li:null,
+	$item:null,
+	// $n:null,
+	int(){
+		$(".fuck").on('mouseenter',e=> {
+			var n=$(e.target).parent().index();
+			console.log(n);
+ 			$(".slider_button_left a").css("width",0);
+			$(".fuck").eq(n).children("div").addClass("active");//去掉banner左边的按钮  简直蛋疼
+			$(".shopping_nav_list>li").eq(n).addClass('shopping_nav_list_hover');
+		})
+		$(".fuck").on('mouseleave',e=> {
+			var n=$(e.target).parent().index();
+			$(".slider_button_left a").css("width",40);
+			$(".shopping_nav_item").removeClass("active");
+			$(".shopping_nav_list>li").removeClass('shopping_nav_list_hover');
+		})
+	},
+	 
+
+}
+nav_pump.int();
+
+
 
 
 var slider1={
