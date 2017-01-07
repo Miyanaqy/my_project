@@ -15,8 +15,10 @@
 	z-index: 10;
 
 }
-
-.shopping_nav li a{
+/*.shopping_nav_list li:hover{
+	background: #ff6700;
+}*/
+.shopping_nav_list>li>a{
 	color: #fff;
 	height: 42px;
 	display: block;
@@ -24,6 +26,56 @@
 	font-size: 14px;
 	line-height: 42px;
 	background: url(Images/my_list_01.png)no-repeat 196px -65px;
+}
+.shopping_nav_list_hover{
+	background: #ff6700;
+}
+
+/*侧边导航弹出内容*/
+
+.shopping_nav_item{
+	/*height: 460px;*/
+	/*width: 200px;*/
+	/*background: #fff;*/
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 234px;
+	width:530px;
+}
+.shopping_nav_item.active{
+	display: block;
+}
+
+.shopping_nav_item_list{
+	height: 460px;
+	/*width: 265px;*/
+	background-color: #fff;
+	float: left;
+	box-shadow: 16px 8px 16px rgba(0,0,0,0.18);
+}
+.shopping_nav_item_list .star-goods{
+	width: 265px;
+	height: 76px;
+}
+.shopping_nav_item_list .star-goods1{
+	width: 140px;
+	padding: 18px 20px;
+	display: inline-block;
+}
+ 
+.shopping_nav_item_list .star-goods2{
+	border: 1px solid #ff6700;
+	color:#ff6700;
+	width: 58px;
+	height: 22px;
+	padding: 2px 12px;
+}
+.shopping_nav_item_list .star-goods2:hover{
+
+	background: #ff6700;
+	color:#fff;
+	 
 }
 
 /*轮播图*/
@@ -33,6 +85,7 @@
  	overflow: hidden;
  	height: 460px;
  	width: 1226px;
+ 	background-color: rgba(0,0,0,.18);
 }
 .banner_button{
 	position: absolute;
