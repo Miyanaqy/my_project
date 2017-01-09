@@ -70,10 +70,6 @@ var fade_slider={
 }
 fade_slider.autoChange();
 
-
-
-
-
 // 导航侧边弹出显示
 var nav_pump={
 	$li:null,
@@ -98,9 +94,6 @@ var nav_pump={
 
 }
 nav_pump.int();
-
-
-
 
 var slider1={
 	$length:null,
@@ -254,3 +247,56 @@ var hover2={
 }
 hover2.in();
 // $(".contant-item>li")
+
+var star_product_slider={
+	//$ul:null,
+	// button:null,
+	$left:null,
+	$right:null,
+	timer:null,
+	WAIT:5000,
+	MOVE:0,
+	autoChange(){
+		
+		this.$right=$('.arrow_button a:first-child');
+		this.$left=$('.arrow_button a:last-child');
+		this.timer=setInterval(()=>{ 
+		    if(this.MOVE <1){ 
+			    this.MOVE ++; 
+			}else{ 
+			    this.MOVE = 0;
+			}
+	    	this.change(this.MOVE);
+	    	// console.log(this);
+    	},this.WAIT);
+    	this.$right.unbind("click").on("click",e=>{
+    		e.preventDefault();
+    			clearTimeout(this.timer);
+    			this.timer=null;
+    			this.MOVE=1;
+		       	this.change(this.MOVE);
+		       	this.autoChange();
+		       	// console.log("R"+this.MOVE);
+
+    	});
+    	this.$left.unbind("click").on("click",e=>{
+    		e.preventDefault();
+    		
+    			clearTimeout(this.timer);
+    			this.timer=null;
+    			this.MOVE=0;
+		       	this.change(this.MOVE);
+		       	this.autoChange();
+		       	// console.log("L"+this.MOVE);
+
+    	});
+	},
+	change(num){
+		if (num===1) {
+			$('.star_product>ul').addClass('star_product_active');
+		}else{
+			$('.star_product>ul').removeClass('star_product_active');
+		}
+	},
+}
+star_product_slider.autoChange();
