@@ -248,6 +248,8 @@ var hover2={
 hover2.in();
 // $(".contant-item>li")
 
+
+// 明星商品的轮播
 var star_product_slider={
 	//$ul:null,
 	// button:null,
@@ -300,3 +302,66 @@ var star_product_slider={
 	},
 }
 star_product_slider.autoChange();
+
+//为您推荐的轮播
+var recommend_product_slider={
+	//$ul:null,
+	// button:null,
+	$left:null,
+	$right:null,
+	timer:null,
+	WAIT:5000,
+	MOVE:0,
+	autoChange(){
+		
+		this.$right=$('.arrow_button2 a:first-child');
+		this.$left=$('.arrow_button2 a:last-child');
+		// this.timer=setInterval(()=>{ 
+		//     if(this.MOVE <5){ 
+		// 	    this.MOVE ++; 
+		// 	}else{ 
+		// 	    this.MOVE = 0;
+		// 	}
+	 //    	this.change(this.MOVE);
+	 //    	// console.log(this);
+  //   	},this.WAIT);
+    	this.$right.unbind("click").on("click",e=>{
+    		e.preventDefault();
+    			// clearTimeout(this.timer);
+    			// this.timer=null;
+    			this.MOVE++;
+    			if (this.MOVE>5) {
+    				this.MOVE=5;
+    				return;
+    			}
+		       	this.change1(this.MOVE);
+		       	this.autoChange();
+		        
+
+    	});
+    	this.$left.unbind("click").on("click",e=>{
+    		e.preventDefault();
+    		
+    			clearTimeout(this.timer);
+    			this.timer=null;
+    			this.MOVE--;
+    			if (this.MOVE<0) {
+    				this.MOVE=0;
+    				return;
+    			}
+		       	this.change2(this.MOVE);
+		       	this.autoChange();
+		       
+
+    	});
+	},
+	change1(num){
+		console.log(num);
+			$('#recommend').removeClass('recommend_product_slider'+(num-1)).addClass('recommend_product_slider'+num);
+	},
+	change2(num){
+		console.log(num);
+			$('#recommend').removeClass('recommend_product_slider'+(num+1)).addClass('recommend_product_slider'+num);
+	},
+}
+recommend_product_slider.autoChange();
