@@ -729,6 +729,21 @@
 	/*width: 1226px;*/
 }
 /*每隔5个清除一次右外边距*/
-#recommend li:nth-child(0),#recommend li:nth-child(6),#recommend li:nth-child(11),#recommend li:nth-child(16),#recommend li:nth-child(21),#recommend li:nth-child(26){
+#recommend li:nth-child(1),#recommend li:nth-child(6),#recommend li:nth-child(11),#recommend li:nth-child(16),#recommend li:nth-child(21),#recommend li:nth-child(26){
 	margin-left: 0;
+}
+
+
+
+.hover_comment{
+	height: 75px;
+	width: 234px;
+	background: #ff6700;
+	margin-top: 38px;
+	opacity: 0;
+	transition:  all .2s linear;
+}
+.hover_comment.active{
+	opacity: 1;
+	margin-top: -38px;
 }
