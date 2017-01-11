@@ -365,3 +365,37 @@ var recommend_product_slider={
 	},
 }
 recommend_product_slider.autoChange();
+
+
+//  商品hover时上升评价
+var hover_comment={
+	$li:null,
+	int(){
+		$('.right_product').on('mouseover','.fuck',e=>{
+			$(e.target).find('.hover_comment').addClass('active');
+			console.log('ci');
+		});
+		$('.right_product').on('mouseout','.fuck',e=>{
+			$(e.target).find('.hover_comment').removeClass('active');
+			console.log('ci');
+		})
+	}
+}
+
+
+// $(".fuck").on('mouseenter',e=> {
+ 
+//  			$(".slider_button_left a").css("width",0);
+// 			$(".fuck").eq(n).children("div").addClass("active");//去掉banner左边的按钮  简直蛋疼
+// 			$(".shopping_nav_list>li").eq(n).addClass('shopping_nav_list_hover');
+// 		})
+// 		$(".fuck").on('mouseleave',e=> {
+// 			var n=$(e.target).parent().index();
+// 			$(".slider_button_left a").css("width",40);
+// 			$(".shopping_nav_item").removeClass("active");
+// 			$(".shopping_nav_list>li").removeClass('shopping_nav_list_hover');
+// 		})
+
+
+
+hover_comment.int()
