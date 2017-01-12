@@ -371,31 +371,34 @@ recommend_product_slider.autoChange();
 var hover_comment={
 	$li:null,
 	int(){
-		$('.right_product').on('mouseover','.fuck',e=>{
-			$(e.target).find('.hover_comment').addClass('active');
-			console.log('ci');
-		});
-		$('.right_product').on('mouseout','.fuck',e=>{
-			$(e.target).find('.hover_comment').removeClass('active');
-			console.log('ci');
-		})
+		// $('.right_product>ul').on('mouseover','li',e=>{
+		// 	$(e.target).find('.hover_comment').addClass('active');
+			
+		// });
+		// $('.right_product').on('mouseout',e=>{
+		// 	$(e.target).parent('ul').find('.hover_comment').removeClass('active');
+		// 	console.log($(e.target));
+		// })
+		this.$li=$('.right_product>ul>li');
+
+		this.$li.hover(	
+				e=> {
+					if ($(e.target).hasClass('comment')) {
+						$(e.target).find('.hover_comment').addClass('active');
+					}else {
+						$(e.target).parent('li').find('.hover_comment').addClass('active');
+					}
+					
+				},
+				e=> {
+					$('.hover_comment').removeClass('active');
+					console.log(e.target);
+				}
+			)
 	}
 }
 
-
-// $(".fuck").on('mouseenter',e=> {
  
-//  			$(".slider_button_left a").css("width",0);
-// 			$(".fuck").eq(n).children("div").addClass("active");//去掉banner左边的按钮  简直蛋疼
-// 			$(".shopping_nav_list>li").eq(n).addClass('shopping_nav_list_hover');
-// 		})
-// 		$(".fuck").on('mouseleave',e=> {
-// 			var n=$(e.target).parent().index();
-// 			$(".slider_button_left a").css("width",40);
-// 			$(".shopping_nav_item").removeClass("active");
-// 			$(".shopping_nav_list>li").removeClass('shopping_nav_list_hover');
-// 		})
-
 
 
 hover_comment.int()
