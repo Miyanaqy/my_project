@@ -380,21 +380,45 @@ var hover_comment={
 		// 	console.log($(e.target));
 		// })
 		this.$li=$('.right_product>ul>li');
+		//两种方法都可以就是太蠢
+		//必须要给img加class
+		// this.$li.hover(	
+		// 		e=> {
+		// 			if ($(e.target).hasClass('comment')) {
+		// 				$(e.target).find('.hover_comment').addClass('active');
+		// 			}else if ($(e.target).hasClass('comment_ad')) {
+		// 				$(e.target).parent().parent('li').find('.hover_comment').addClass('active');
+		// 			}else {
+		// 				$(e.target).parent('li').find('.hover_comment').addClass('active');
+		// 			}
+		// 		},
+		// 		e=> {
+		// 			$('.hover_comment').removeClass('active');
+		// 			console.log(e.target);
+		// 		}
+		// 	)
 
-		this.$li.hover(	
-				e=> {
-					if ($(e.target).hasClass('comment')) {
-						$(e.target).find('.hover_comment').addClass('active');
-					}else {
-						$(e.target).parent('li').find('.hover_comment').addClass('active');
-					}
-					
-				},
-				e=> {
-					$('.hover_comment').removeClass('active');
-					console.log(e.target);
-				}
-			)
+
+
+		
+		this.$li.on('mouseenter',function (e) {
+		 	if ($(e.target).hasClass('comment')) {
+				$(e.target).find('.hover_comment').addClass('active');
+			}else if ($(e.target).hasClass('comment_ad')) {
+		 			$(e.target).parent().parent('li').find('.hover_comment').addClass('active');
+			}else{			
+				$(e.target).parent('.comment').find('.hover_comment').addClass('active');
+			}
+		});
+		this.$li.on('mouseleave',function (e) {
+			$('.hover_comment').removeClass('active');
+		})
+
+
+
+
+
+
 	}
 }
 
