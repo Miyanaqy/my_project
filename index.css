@@ -15,7 +15,7 @@ a{
 	text-decoration: none;
 }
 a:hover{
-	color: #00a1d6;
+	color: #f56600;
 }
 ul,li,p,h1,h2,h3,h4,h5,h6,dl,dd{
 	margin: 0px;
@@ -33,7 +33,9 @@ img{
 	margin: 0 auto;
 }
 
-
+.clear{
+	clear: both;
+}
 
 /*清除浮动*/
 /*#top:after,#banner:after,#main:after,#footer:after,.nav:after,#sub:after,#star:after#{
@@ -41,7 +43,11 @@ img{
 	display: block;
 	clear: both;
 }*/
-
+.contant:after,.top_box:after{
+	content: "";
+	display: block;
+	clear: both;
+}
 #top{
 	height: 140px;
 }
@@ -50,9 +56,10 @@ img{
 }
 
 #main{
-	height: 4614px;
-	background-color: #FAFAFA;
+	height: 4698px;
+	background-color: rgb(245,245,245);
 	width: 100%;
+
 }
 #footer{
 	height: 334px;
@@ -101,7 +108,7 @@ img{
 	 color: #fff;
 }
 /*商城导航*/
-#top_box{
+.top_box{
 	height: 100px;
 }
 
@@ -112,18 +119,38 @@ img{
 }
 /*导航*/
 .mall_nav{
-	height: 100px;
 	float: left;
 	margin-left: 180px;
+	position: relative;
+    z-index: 10;
+    width: 820px;
+    height: 88px;
+    padding: 12px 0 0 30px;
+    list-style-type: none;
+    /*font-size: 16px;*/
 }
-.mall_nav li{
+.mall_nav>li{
 	float: left;
 }
-.mall_nav li a {
+.mall_nav>li>a {
 	padding: 0 12px;
 	font-size: 16px;
 	line-height: 100px;
 }
+
+/*上方导航*/
+.container{
+	height: 230px;
+	width: 100%;
+	position: absolute;
+	background-color: #fff;
+	z-index: 100000;
+	border-top: 1px solid #ddd;
+	box-shadow: 16px 8px 16px rgba(0,0,0,0.18);
+}
+    
+ 
+
 
 
 /*搜素*/
@@ -161,7 +188,7 @@ img{
 .service{
 	padding: 30px 60px;
 	border-bottom: 1px solid #ddd;
-	width: 1226px;
+	width: 1100px;
 }
 .service>ul{
 	width: 1226px;
@@ -251,7 +278,8 @@ img{
 .site_info{
 	height: 160px;
 	/*width: 100%;*/
-	background-color: #FAFAFA;
+	background-color:  #fafafa;
+	padding-top: 50px;
 }
 .site_info>div{
 	width: 1226px;
@@ -277,5 +305,8 @@ img{
 .v-logo img{
 	height: 28px;
 	width:85px;
-	padding: 20px 15px;
+	padding: 20px 4px;
 }
+
+
+
