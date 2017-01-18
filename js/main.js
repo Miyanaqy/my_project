@@ -193,9 +193,9 @@ var slider2={
 		this.$rt.on("click",e=>{ 
 				this.n++;
 			    this.$ul.css("margin-left",this.$left-this.$length*(this.n));
-			    if (this.n>2) {
-			      this.n=2;
-			      this.$ul.css("margin-left",this.$left-this.$length*2);
+			    if (this.n>3) {
+			      this.n=3;
+			      this.$ul.css("margin-left",this.$left-this.$length*3);
 			    }
 			    this.$point=$(".contant-item-pager2");
 			    this.$point.removeClass('pager-active');
@@ -246,6 +246,81 @@ var hover2={
 	}, 
 }
 hover2.in();
+
+
+var slider3={
+	$length:null,
+	$left:null,
+	$right:null,
+	n:0,
+	int(){
+		this.point();
+		this.change();
+	},
+	change1(m){
+		this.n=m-1;
+	},
+	change(m){
+		this.$length=parseFloat($(".contant-item_slider").css("width"));
+		this.$left=parseFloat($(".contant-item_slider>ul").css("margin-left"));
+		this.$rt=$("#ddd3");
+		this.$ul=$("#eee3");
+		this.$rt.on("click",e=>{ 
+				this.n++;
+			    this.$ul.css("margin-left",this.$left-this.$length*(this.n));
+			    if (this.n>3) {
+			      this.n=3;
+			      this.$ul.css("margin-left",this.$left-this.$length*3);
+			    }
+			    this.$point=$(".contant-item-pager3");
+			    this.$point.removeClass('pager-active');
+	 			$(`.contant-item-pager3:eq(${this.n})`).addClass('pager-active');
+			});
+			this.$lt=$("#ccc3"); 
+			this.$lt.on("click",e=>{
+			    this.n--;
+			    this.$ul.css("margin-left",this.$left-this.$length*this.n);
+			    if (this.n<0) {
+			        this.n=0;
+			        this.$ul.css("margin-left",0);
+			    }
+			    this.$point=$(".contant-item-pager3");
+			    this.$point.removeClass('pager-active');
+	 			$(`.contant-item-pager3:eq(${this.n})`).addClass('pager-active');
+			});
+	},
+ 	point(){
+ 		this.$point=$(".contant-item-pager3");
+ 		this.$point.on("click",'.dot',e=>{
+ 			var end=Number($(e.target).html());
+  			this.$point.removeClass('pager-active');
+ 			$(e.target).parent().addClass('pager-active');
+ 			this.$ul.css("margin-left",-this.$length*(end-1));
+ 			this.change1(end);
+		});
+ 	}
+}
+slider3.int();
+
+var hover3={
+	$li:null,
+	$button:null,
+	in(){
+		this.$li=$(".contant-item>.bbb3");
+		this.$button=$(".contant-item_slider_button.fff3");
+			this.$li.hover(	
+				e=> {
+					this.$button.stop().animate(
+					{opacity:1},200)
+				},
+				e=> {
+					this.$button.stop().animate(
+					{opacity:0},200)
+				}
+			)
+	}, 
+}
+hover3.in();
 // $(".contant-item>li")
 
 
@@ -341,7 +416,6 @@ var recommend_product_slider={
     	});
     	this.$left.unbind("click").on("click",e=>{
     		e.preventDefault();
-    		
     			clearTimeout(this.timer);
     			this.timer=null;
     			this.MOVE--;
