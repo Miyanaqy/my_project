@@ -657,7 +657,7 @@
 	border-color: #ff6700;
 	background-color: transparent;
 }
-.contant-item-pagers .contant-item-pager1,.contant-item-pagers .contant-item-pager2 {
+.contant-item-pagers .contant-item-pager1,.contant-item-pagers .contant-item-pager2,.contant-item-pagers .contant-item-pager3,.contant-item-pagers .contant-item-pager4 {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -678,6 +678,31 @@
     cursor: pointer;
     transition: all .5s;
 }
+/*无情图书小按钮*/
+#main_product .contant-btn-orange{
+	border: 1px solid #ffac13;
+    background: #fff; 
+   	height: 30px;
+   	width: 120px;
+   	margin: 0 auto;
+	line-height: 30px;
+}
+#main_product .contant-btn-orange a{
+	color: #ffac13;
+}
+#main_product .contant-btn-orange:hover a{
+	color: #fff;
+}
+#main_product .contant-btn-orange:hover{
+	background: #ffac13;
+}
+
+
+/*orange-btn下的图片*/
+.contant-btn-img{
+	margin-top: 40px;
+}
+
 
 .video ul li img{
 	height: 180px;
