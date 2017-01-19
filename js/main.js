@@ -499,4 +499,29 @@ var hover_comment={
  
 
 
-hover_comment.int()
+hover_comment.int();
+
+
+
+
+
+
+
+// 视频弹出显示
+var video_drop={
+	$div:null,
+	$timer:null,
+	int(){
+		$('.fuck').on('click',function (e) {
+			e.preventDefault();
+			this.$div=document.createElement('div');
+			this.$div.className='video-drop';
+			$('.site_info').after(this.$div);
+			this.timer=setTimeout(function () {
+				// 一次性定时器添加Class  ....真的醉了
+				$('.video-drop').addClass('video-drop-active');
+			},10);
+		})
+	}
+}
+video_drop.int();
