@@ -1,26 +1,24 @@
 var container_down={
 	$container:null,
 	$li:null,
+	$ul:null,
 	init(){
 		this.$li=$('.nav-item');
 		this.$container=$('.container');
-		// $li.on('mouseenter',function (e) {
-		// 	$container.addClass('container-active');
-		// })
-		// $li.on('mouseout',function (e) {
-		// 	$container.addClass('container-active');
-		// })
-
-		this.$li.hover(	
-			e=> {
-				this.$container.addClass('container-active');
-			},
-			e=> {
-				this.$container.removeClass('container-active');
-			}
-		)
-
+		this.$ul=$('.container_item');
+		this.$li.on("mouseenter",e=>{
+    		e.preventDefault();
+    		this.$container.addClass('in');
+    		this.$ul.addClass('collapsing');
+    	});
+    	this.$li.on("mouseleave",e=>{
+    		e.preventDefault();
+    		this.$container.removeClass('in');
+    		this.$ul.removeClass('collapsing');
+    	});
+	 
 	}
 }
 container_down.init();
+
  
