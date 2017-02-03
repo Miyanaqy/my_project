@@ -3,7 +3,6 @@
 	border:1px solid #000;
 }*/
 /*通用样式*/
-
 body{
 	font: 12px "microsoft yahei",Arial,Helvetica,sans-serif;
 	color:#000;
@@ -31,8 +30,8 @@ img{
 #top,#banner,#main_product,#footer,#sub,#star{
 	width: 1226px;
 	margin: 0 auto;
-}
 
+}
 .clear{
 	clear: both;
 }
@@ -70,6 +69,7 @@ img{
 #star{
 	height: 425px;
 }
+
 
 /******************  页面顶部     ************************/
 .top_bar{
@@ -122,10 +122,10 @@ img{
 	float: left;
 	margin-left: 180px;
 	position: relative;
-    z-index: 10;
+    z-index: 100001;
     width: 820px;
     height: 88px;
-    padding: 12px 0 0 30px;
+    /*padding: 12px 0 0 30px;*/
     list-style-type: none;
     /*font-size: 16px;*/
 }
@@ -138,25 +138,54 @@ img{
 	line-height: 100px;
 }
 
-/*上方导航*/
-.container{
-	height: 230px;
-	width: 100%;
+
+
+
+
+/*导航详情*/
+.mall_nav .container{
+	width: 1000%;
 	position: absolute;
-	background-color: #fff;
-	z-index: 100000;
-	border-top: 1px solid #ddd;
-	box-shadow: 16px 8px 16px rgba(0,0,0,0.18);
+    top: 100%;
+    left: -520%;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    /*padding: 5px 0;*/
+    margin: 2px 0 0;
+    list-style: none;
+    font-size: 14px;
+
 }
-    
- 
+
+
+
+
+.collapsing {
+	position: relative;
+	height: 110px;
+	overflow: hidden;
+	transition-property: height, visibility;
+	transition-duration: 0.35s;
+	transition-timing-function: ease;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    background-clip: padding-box;
+}
+
+
 
 
 
 /*搜素*/
 .search{
 	float: right;
-	margin-top: 23px;
+	/*margin-top: 23px;*/
+	    margin-top: -63px;
 }
 .search input:first-child{
 	height: 52px;
