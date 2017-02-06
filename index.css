@@ -131,6 +131,8 @@ img{
 }
 .mall_nav>li{
 	float: left;
+	height: 80px;
+	margin: auto; 
 }
 .mall_nav>li>a {
 	padding: 0 12px;
@@ -152,24 +154,31 @@ img{
     float: left;
     list-style: none;
     font-size: 14px;
+    height: 0;
 }
 
 .container_item{
-	margin-top: 12px;
+	/*display: none;*/
+	/*margin-top: 12px;*/
 	height: 0px;
 	position: relative;
 	overflow: hidden;
     text-align: center;
     background-color: #fff;
-    border-top: 1px solid #cccccc;
+    /*border-top: 1px solid #cccccc;*/
     border-radius: 4px;
-    transition:all 0.5s ease; 
+    transition:height 0.2s linear; 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
     background-clip: padding-box;
 }
 
 .collapsing{
+	/*display: block;*/
 	height: 210px;
+}
+.collapsed{
+	height: 210px;
+	display: block;
 }
 
    
