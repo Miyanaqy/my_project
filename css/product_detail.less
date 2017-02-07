@@ -1,0 +1,297 @@
+body{
+	font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    color: #333;
+    background-color: #fff;
+    min-width: 1226px;
+}
+body {
+    margin: 0;
+}
+a{
+   	color: #757575;
+}
+//清除浮动
+#content:after,.step-list:after,.container:after
+,.pro-choose-main:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.mini-header{
+	font-size: 12px;
+    border-bottom: 2px solid #ff6700;
+    background: #fff;
+    color: #b0b0b0;
+    .header-logo{
+    	width:93px;
+	    height: 48px;
+    	margin-top: 26px;
+    	position: relative;
+	    display: block;
+	    overflow: hidden;
+	    background-color: #ff6700;
+    	.logo{
+			width: 48px;
+			height: 48px;
+			background: url(../Images/rXYoKbaMEwmbMB+MEfSd3RZYYAAAAASUVORK5CYII=.png) no-repeat 50% 50%;
+    	}
+    }
+    
+}
+.container{
+	width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.buy-choose-box{
+	color: #333;
+	.pro-nav-8{
+	    margin: 0;
+	    padding: 0;
+	    border-bottom: 1px solid #dfdfdf;
+	    .item{
+	    	width: 12.5%;
+		    float: left;
+		    height: 76px;
+		    line-height: 76px;
+		    margin: 0 0 -1px;
+		    list-style: none;
+		    text-align: center;
+		    font-size: 14px;
+		    border-bottom: 1px solid #dfdfdf;
+		    cursor: pointer;
+	    }
+	}
+}
+.pro-choose-main{
+	margin: 0 0 110px;
+	position: relative;
+}
+.pro-view{
+	width: 600px;
+	height: 600px;
+	float: left;
+	margin: 50px 0 0 48px;
+	overflow: hidden;
+	/*background: url("") no-repeat center center;*/
+	img{
+		height: 80%;
+	}
+}
+.pro-info{
+	float: right;
+    width: 544px;
+    margin-top: 60px;
+    .pro-title{
+	    height: 60px;
+	    margin-bottom: 25px;
+	    border-bottom: 1px solid #dfdfdf;
+	    position: relative;
+	    h1{
+	    	margin: 0;
+		    font-size: 30px;
+		    line-height: 56px;
+		    font-weight: normal;
+		    .pro-name{
+			    float: left;
+		    }
+		    .pro-price{
+		    	margin-left: 10px;
+				color: #ff6700;
+		    }
+	    }
+	    .pro-more{
+    	    position: absolute;
+		    top: 26px;
+		    right: 0;
+		    color: #666;
+		    font-size: 12px;
+	    }
+    }
+    .pro-step{
+    	.step-title{
+	 	    height: 36px;
+		    line-height: 2;
+		    margin: 0;
+		    padding: 10px 0;
+		    font-weight: normal;
+		    font-size: 18px;
+    	}
+    	.pro-version{
+    	 	display: inline-block;
+		    margin-left: 12px;
+		    min-height: 20px;
+		    line-height: 1.5;
+		    font-size: 12px;
+		    color: #b0b0b0;
+    	}
+    	.step-list{
+    		margin: 0 0 0 -14px;
+            padding: 0;
+            .step-item{
+                float: left;
+                width: 263px;
+                height: 48px;
+                line-height: 48px;
+                margin: 0 0 14px 14px;
+                border: 1px solid #dfdfdf;
+                list-style: none;
+                text-align: center;
+                cursor: pointer;
+                transition: all .2s ease;
+            }
+    	}
+    }
+}
+//产品选择详情
+.choose-result-msg{
+  	margin: 26px 0 10px;
+  	.msg-tit{
+	    line-height: 24px;
+	    color: #212121;
+	    font-size: 14px;
+ 	}
+ 	.msg-bd{
+ 		margin: 1em 0;
+ 	}
+}
+.choose-result{
+	padding-top: 15px;
+	.btn{
+		display: inline-block;
+	    width: 158px;
+	    height: 38px;
+	    padding: 0;
+	    margin: 0;
+	    border: 1px solid #b0b0b0;
+	    font-size: 14px;
+	    line-height: 38px;
+	    text-align: center;
+	    color: #b0b0b0;
+	    cursor: pointer;
+ 	    transition: all .4s;
+	}
+}
+.pro-detail-box{
+	border-top: 1px solid #dfdfdf;
+	.section{
+		text-align: center;
+		.section-image a{
+		    display: block;
+		    width: 1226px;
+		    margin: 0 auto;
+		    height: 100%;
+		    min-height: 300px;
+		    outline: none;
+		    border-bottom: 1px solid #e0e0e0;
+		}
+	}
+  	img{
+	  max-width: 1226px;
+	}
+}
+//了解参数
+.section-specs .spec-title{
+    padding: 80px 0 60px;
+    text-align: center;
+    font-size: 30px;
+    color: #424242;
+    cursor: pointer;
+    font-weight: normal;
+    -webkit-user-select: none;
+}
+
+//商品推荐
+.section-recommend{
+	.container{
+		min-height: 400px;
+		.section-acc{
+			min-width: 400px;
+    		/*border-bottom: none !important;*/
+    		text-align: center;
+    		.acc-title{
+				padding: 90px 0 60px;
+			    font-size: 30px;
+			    color: #424242;
+			    line-height: 1.4;
+    		}
+    		.list{
+    			overflow: hidden;
+    			li{
+				    float: left;
+				    width: 33.33%;
+				    height: 390px;
+				    border-left: 1px solid #dfdfdf;
+				    border-bottom: 1px solid #dfdfdf;
+				    margin-left: -1px;
+				    margin-bottom: -1px;
+				    .item-info{
+						margin-top: 50px;
+						h3{
+							margin: 0;
+						    font-weight: normal;
+						    font-size: 20px;
+						    color: #333;
+						}
+						.price{
+							margin: 10px 0 0;
+						    font-size: 16px;
+						    color: #f36701;	
+						    em{
+						    	font-style: normal;
+    							font-size: 36px;
+    							font-family: 'Avenir', 'Microsoft Yahei', arial;
+						    }
+						}
+				    }
+				    img{
+				    	width: 220px;
+    					height: 220px;
+				    }
+    			}
+    		}
+		}
+	}
+}
+
+//小米之家
+.section-mihome{
+	background: url(../Images/detail/Z.jpg)no-repeat center 0;
+	.container{
+		height: 600px;
+   		position: relative;
+	}
+	.mihome-desc{
+		position: absolute;
+   		bottom: 0;
+   		left: 0;
+   		width: 100%;
+   		height: 160px;
+   		background-color: rgba(0,0,0,0.7);
+   		color: #fff;
+   		dl{
+   			float: left;
+		    width: 820px;
+		    padding: 40px 0 0 80px;
+		    dt{
+		    	margin-bottom: 10px;
+    			font-size: 24px;
+		    }
+   		}
+   		p{
+   			float: right;
+    		padding: 25px 35px 0 0;
+   		}
+   		.btn{
+		    display: block;
+			margin-bottom: 10px;
+    		background-color: transparent;
+   		}
+	}
+	dd{
+		margin: 0;
+	    padding: 0;
+	    list-style: none;
+	}
+}
