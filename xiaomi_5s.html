@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="myApp" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/product_detail.css">
-</head>
-<body>
+ </head>
+<!-- 引入一个控制器  后面改动态 这地方要修改  用js加载控制器 -->
+<body ng-controller="detail">
 	<header class="mini-header">
 		<div class="container">
 			<div class="header-logo">
@@ -145,10 +146,10 @@
 					</a>
 				</div>
 				<div class="section section-specs container">
-					<div class="spec-title"> 了解小米5s参数
+					<div ng-click="clickShow()" class="spec-title"> 了解小米5s参数
 						<i class="arrow"></i>
 					</div>
-					<h1>我是参数</h1>
+					<h1 ng-show="click_show">我是参数</h1>
 				</div>
 			</div>
 		</div>
@@ -334,9 +335,10 @@
 
 
 	<!-- video弹出显示 -->
-
 	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="js/angular.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/detail.js"></script>
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
 </html>
