@@ -12,3 +12,17 @@ app.controller('detail', function ($scope) {
         }
     }
 })
+
+// 轮播
+var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        speed:1000,
+        //spaceBetween:0,
+        effect: 'fade',
+        loop:1,
+        // 鼠标拖动无效
+        simulateTouch : false,
+});
