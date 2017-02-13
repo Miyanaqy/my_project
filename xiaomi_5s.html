@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/swiper-3.4.1.min.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/product_detail.css">
  </head>
@@ -137,9 +138,20 @@
 						<img src="Images/detail/mi5s-shenruliaojie.jpg" alt="">
 					</a>
 				</div>
-				<div class="section section-slider">
-					<h1>这是一个轮播</h1>
-				</div>
+				<!-- 轮播 -->
+			    <div class="swiper-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide" style="background-image:url(Images/detail/detail_slider1.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(Images/detail/detail_slider2.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(Images/detail/detail_slider3.jpg)"></div>
+			            <div class="swiper-slide" style="background-image:url(Images/detail/detail_slider4.jpg)"></div>
+			        </div>
+			        <!-- Add Pagination -->
+			        <div id="swiperBtn" class="swiper-pagination swiper-pagination-white"></div>
+			        <!-- Add Arrows -->
+			        <div class="swiper-button-next"></div>
+			        <div class="swiper-button-prev"></div>
+			    </div>
 				<div class="section section-image">
 					<a href="#">
 						<img src="Images/detail/mi5s-yiwaibao.jpg" alt="">
@@ -338,6 +350,7 @@
 	<script type="text/javascript" src="js/jquery-3.1.1.js"></script>
 	<script type="text/javascript" src="js/angular.js"></script>
 	<script type="text/javascript" src="js/index.js"></script>
+	<script src="js/swiper-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/detail.js"></script>
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
