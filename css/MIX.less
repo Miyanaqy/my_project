@@ -1,0 +1,80 @@
+#product-MIX{
+	min-height: 5000px;
+}
+
+body {
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+  background-color: #fff;
+  min-width: 1226px;
+}
+body {
+  margin: 0;
+}
+a {
+  color: #757575;
+}
+.nav-bar{
+	margin-top: 15px;
+    position: relative;
+    height: 50px;
+    background: #f5f5f5;
+    color: #616161;
+}
+
+.title{
+	float: left;
+	margin: 10px 0 0 0;
+	h2{
+		margin: 0;
+	    font-size: 18px;
+	    font-weight: 400;
+	    line-height: 30px;
+	    color: #424242;
+	}
+}
+.nav{
+	float: right;
+    margin: 10px 0 0 0;
+    .nav-switch{
+		margin-right: 10px;
+  		line-height: 30px;
+    }
+    .buyBtn{
+    	background: #ff6700;
+    	color: #fff;
+        vertical-align: bottom;
+        width: 118px;
+    	height: 28px;
+   	 	font-size: 12px;
+   	 	line-height: 28px;
+        margin: 0;
+    	border: 1px solid #b0b0b0;
+    	text-align: center;
+        cursor: pointer;
+		    display: inline-block;
+    }
+}
+//弹出的样式
+.nav-bar.fix-bar{
+  width:100%;
+  margin-top: -52px;
+  background: rgba(0,0,0,0.5);
+  border-bottom: 0;
+  box-shadow: 0 0 3px #555;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: margin-top .5s ease-out;
+  color:#fff;
+  h2{
+	color:#fff;
+  }
+  .nav-switch a{
+	color:#fff;
+  }
+}
+.nav-bar.fix-bar.active{
+  margin-top: 0;
+}
