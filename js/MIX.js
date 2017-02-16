@@ -7,17 +7,19 @@
 // 滚屏添加class
 var scrollAddClass={
 	scroll:null,
+	$container:null,
 	init(){
+		// this.$container=$(".nav-bar>.container")
 		$(window).on("scroll",e=>{
-			scroll=window.scrollY
-			console.log(scroll)
-			if (scroll>=140) {
-				$('.site_info').addClass('ss')
+			this.scroll=window.scrollY
+			// console.log(this.scroll)
+			if (this.scroll>=140) {
+				$(".nav-bar.fix-bar").addClass('active')
 			}else{
-				$('.site_info').removeClass('ss')
+				$(".nav-bar.fix-bar").removeClass('active')
 			}
 		})
-
 	}
 }
 scrollAddClass.init()
+
