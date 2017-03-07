@@ -56,7 +56,6 @@ a {
   background: rgba(0, 0, 0, 0.5);
   border-bottom: 0;
   box-shadow: 0 0 3px #555;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
@@ -70,16 +69,119 @@ a {
   color: #fff;
 }
 .nav-bar.fix-bar.active {
-  margin-top: 0;
+  margin-top: 0px;
 }
 .content_header {
   height: 204px;
 }
-h2 {
-  opacity: 0;
-  transition: all 1s;
+#fullpage.active {
+  margin-top: -52px;
 }
-.fuck {
+.section_banner {
+  background: url(../Images_MIX/index-bg1.jpg) center center;
+  background-size: cover;
+  transition: background 1s linear 1s;
+}
+.section_banner.in {
+  background: url(../Images_MIX/index-bg2-s.jpg) center center;
+  background-size: cover;
+}
+.section_banner .container {
+  position: absolute;
+  right: 6.73611%;
+  text-align: right;
+  width: 500px;
+  z-index: 3;
+  top: 20%;
+}
+.section_banner .container h1 {
+  opacity: 0;
+  height: 36px;
+  background: url("../Images_MIX/index-title-s.png") right 0 no-repeat;
+}
+.section_banner .container h1.active {
+  opacity: 1;
+  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.9s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1.9s;
+  transform: translate3d(0px, -20px, 0px);
+}
+.section_banner .container h2 {
+  color: #fff;
+  opacity: 0;
+  font-size: 30px;
+  line-height: 42px;
+  letter-spacing: 5px;
+  margin-right: -6px;
+  font-weight: normal;
+  font-family: 'Microsoft YaHei';
+}
+.section_banner .container h2.active {
+  opacity: 1;
+  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 2.1s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 2.1s;
+  transform: translate3d(0px, -20px, 0px);
+}
+.section_banner .container ul {
+  opacity: 0;
+  margin-top: 20px;
+  width: 100%;
+  color: #fff;
+}
+.section_banner .container ul li {
+  float: right;
+  margin-left: 24px;
+  list-style: none;
+}
+.section_banner .container ul li span {
+  font-size: 26px;
+  display: block;
+  line-height: 1;
+}
+.section_banner .container ul li .specs {
+  font-size: 12px;
+  line-height: 20px;
+  width: 80px;
+  border: 1px solid #fff;
+  margin-top: 5px;
+  text-align: center;
+}
+.section_banner .container ul.active {
+  opacity: 1;
+  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 2.3s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 2.3s;
+  transform: translate3d(0px, -20px, 0px);
+}
+.section_screen {
+  background: url(../Images_MIX/future-bg.jpg) center center;
+  background-size: cover;
+}
+.section_screen .container {
+  top: -10%;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  color: #fff;
+}
+.section_screen .container h2 {
+  font-size: 30px;
+  line-height: 42px;
+  opacity: 0;
+  margin: 0 auto 24px;
+  letter-spacing: 5px;
+  font-weight: normal;
+}
+.section_screen .container h2.active {
   transform: translate3d(0px, -20px, 0px);
   opacity: 1;
+  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+}
+.section_screen .container p {
+  opacity: 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+.section_screen .container p.active {
+  transform: translate3d(0px, -20px, 0px);
+  opacity: 1;
+  transition: opacity 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s, transform 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+}
+.section_video {
+  background-color: #000;
 }
