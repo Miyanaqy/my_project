@@ -66,6 +66,38 @@ app.controller('choose', function ($scope) {
         {img:"minote-icon-fen.png",color:"玫瑰金"},
         {img:"icon-qianhui.jpg",color:"哑光深灰"}
     ];
+
+
+    $scope.buy= function () {
+        //console.log($scope.name+" "+$scope.pwd+" "+$scope.pwd2)
+        //获取uid和uname
+        console.log(sessionStorage.getItem("uid"))
+        //var name=$scope.name
+        //var pwd=$scope.pwd
+        //$scope.user={
+        //    'name':name,
+        //    'pwd':pwd
+        //}
+        //console.log($scope.user)
+        //var params=$.param($scope.user)
+        //console.log(params);
+        //
+        //// //大量数据传递
+        //$http.post("data/register.php?"+params)
+        //    .success(function (data) {
+        //        var result=data[0]
+        //        //可以再用一次下边的checkId
+        //        if(result.msg==='succ'){
+        //            $scope.succMsg="成功"
+        //            // sessionStorage.setItem("phone",$scope.order.phone)
+        //        }else{
+        //            $scope.errMsg="失败"
+        //        }
+        //        // console.log($scope.succMsg)
+        //        // console.log($scope.errMsg)
+        //    })
+    }
+
 });
 
 
