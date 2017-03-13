@@ -76,14 +76,14 @@ var nav_pump={
 	$item:null,
 	// $n:null,
 	int(){
-		$(".fuck").on('mouseenter',e=> {
+		$(".shopping_nav_list_item").on('mouseenter',e=> {
 			var n=$(e.target).parent().index();
 			console.log(n);
  			$(".slider_button_left a").css("width",0);
-			$(".fuck").eq(n).children("div").addClass("active");//去掉banner左边的按钮  简直蛋疼
+			$(".shopping_nav_list_item").eq(n).children("div").addClass("active");//去掉banner左边的按钮  简直蛋疼
 			$(".shopping_nav_list>li").eq(n).addClass('shopping_nav_list_hover');
 		})
-		$(".fuck").on('mouseleave',e=> {
+		$(".shopping_nav_list_item").on('mouseleave',e=> {
 			var n=$(e.target).parent().index();
 			$(".slider_button_left a").css("width",40);
 			$(".shopping_nav_item").removeClass("active");
@@ -334,38 +334,46 @@ var star_product_slider={
 	WAIT:5000,
 	MOVE:0,
 	autoChange(){
-		
 		this.$right=$('.arrow_button a:first-child');
 		this.$left=$('.arrow_button a:last-child');
 		this.timer=setInterval(()=>{ 
 		    if(this.MOVE <1){ 
-			    this.MOVE ++; 
+			    this.MOVE ++;
+			    this.$left.removeClass('active')
+    			this.$right.addClass('active')
 			}else{ 
 			    this.MOVE = 0;
+    			this.$left.addClass('active')
+    			this.$right.removeClass('active') 
 			}
 	    	this.change(this.MOVE);
 	    	// console.log(this);
     	},this.WAIT);
     	this.$right.unbind("click").on("click",e=>{
     		e.preventDefault();
-    			clearTimeout(this.timer);
-    			this.timer=null;
-    			this.MOVE=1;
-		       	this.change(this.MOVE);
-		       	this.autoChange();
-		       	// console.log("R"+this.MOVE);
-
+    		if (this.MOVE!=1) {
+    			this.$left.removeClass('active')
+				this.$right.addClass('active') 	
+    		}	
+			clearTimeout(this.timer);
+			this.timer=null;
+			this.MOVE=1;
+	       	this.change(this.MOVE);
+	       	this.autoChange();
+	       	// console.log("R"+this.MOVE);
     	});
     	this.$left.unbind("click").on("click",e=>{
-    		e.preventDefault();
-    		
-    			clearTimeout(this.timer);
-    			this.timer=null;
-    			this.MOVE=0;
-		       	this.change(this.MOVE);
-		       	this.autoChange();
-		       	// console.log("L"+this.MOVE);
-
+    		if (this.MOVE!=0) {
+    			this.$left.addClass('active')
+				this.$right.removeClass('active') 	
+    		} 
+			e.preventDefault();
+			clearTimeout(this.timer);
+			this.timer=null;
+			this.MOVE=0;
+	       	this.change(this.MOVE);
+	       	this.autoChange();
+	       	// console.log("L"+this.MOVE);
     	});
 	},
 	change(num){
@@ -397,9 +405,9 @@ var recommend_product_slider={
 		// 	}else{ 
 		// 	    this.MOVE = 0;
 		// 	}
-	 //    	this.change(this.MOVE);
-	 //    	// console.log(this);
-  //   	},this.WAIT);
+	    //    	this.change(this.MOVE);
+	    //    	// console.log(this);
+        //   	},this.WAIT);
     	this.$right.unbind("click").on("click",e=>{
     		e.preventDefault();
     			// clearTimeout(this.timer);
@@ -408,6 +416,13 @@ var recommend_product_slider={
     			if (this.MOVE>5) {
     				this.MOVE=5;
     				return;
+    			}
+    			if (this.MOVE==5) {
+    				this.$left.removeClass('active')
+					this.$right.addClass('active') 
+    			}else if(this.MOVE>=1){
+    				this.$left.removeClass('active')
+					this.$right.removeClass('active') 
     			}
 		       	this.change1(this.MOVE);
 		       	this.autoChange();
@@ -423,10 +438,15 @@ var recommend_product_slider={
     				this.MOVE=0;
     				return;
     			}
+    			if (this.MOVE==0) {
+    				this.$left.addClass('active')
+					this.$right.removeClass('active') 
+    			}else if(this.MOVE>=1){
+    				this.$left.removeClass('active')
+					this.$right.removeClass('active') 
+    			}
 		       	this.change2(this.MOVE);
 		       	this.autoChange();
-		       
-
     	});
 	},
 	change1(num){
