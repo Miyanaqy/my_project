@@ -25,7 +25,7 @@
 	padding-left: 30px;
 	font-size: 14px;
 	line-height: 42px;
-	background: url(Images/my_list_01.png)no-repeat 196px -65px;
+	background: url(../Images/my_list_01.png)no-repeat 196px -65px;
 }
 .shopping_nav_list_hover{
 	background: #ff6700;
@@ -116,7 +116,7 @@
 	width: 40px;
 	position: absolute;
 	z-index: 10000;
-	background:url(Images/icon-slides.png)no-repeat ;
+	background:url(../Images/icon-slides.png)no-repeat ;
 	top: 190px;
 
 }
@@ -151,21 +151,59 @@
 
 .sub_service li{
 	width: 64px;
-	
+	position: relative;
+	left: 17px;
+	top: 0px;
 	float: left;
 
 }
 .sub_service a{
-	display: block;
+	display: inline-block;
 	width: 64px;
 	height: 64px;
 	color:rgba(255,255,255,0.7);
 	text-align: center;
-	line-height:88px;
+	line-height:77px;
+}
+.sub_service i{
+	position: relative;
+	top: 17px;
+	left: 17px;
+	width: 29px;
+	height: 29px;
+	display: block;
+	background: url("../Images/Mobile-phone2.png") no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.sub_service li:nth-child(2) i{
+	background: url("../Images/gifts.png") no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.sub_service li:nth-child(3) i{
+	background: url("../Images/integral.png") no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.sub_service li:nth-child(4) i{
+	background: url("../Images/store.png") no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.sub_service li:nth-child(5) i{
+	background: url("../Images/trade1.png") no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+.sub_service li:nth-child(6) i{
+	background: url("../Images/signboard.png") no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .active_AD ul li{
-	float: left;
+float: left;
 	transition:  box-shadow .2s linear;
 	padding-left: 15px;
 }
@@ -186,17 +224,26 @@
 
 .arrow_button a{
 	float: right;
-	background: url(Images/my_list_01.png)no-repeat -36px -144px;
+	background: url(../Images/my_list_01.png)no-repeat -36px -144px;
 	/*width: 71px;*/
 	width: 36px;
 	height: 24px;
+	cursor: pointer;
 }
 .arrow_button a:last-child{
+	background: url(../Images/my_list_02.png)no-repeat 0px 0px;
 	float: right;
-	background: url(Images/my_list_01.png)no-repeat 0px -144px;
-	
+	cursor: pointer;
 }
 
+.arrow_button a.active{
+	cursor: Default;
+	background: url(../Images/my_list_02.png)no-repeat -36px 0px;
+}
+.arrow_button a:last-child.active{
+	cursor: Default;
+	background: url(../Images/my_list_01.png)no-repeat 0px -144px;
+}
 
 
 
@@ -331,21 +378,35 @@
 	height: 20px;
 	float: right;
 	padding-right: 30px;
-	background: url(Images/my_list_01.png)no-repeat 50px -200px;
+	background: url(../Images/my_list_01.png)no-repeat 50px -200px;
 }
-
-
+#main_product .arrow_button2{
+	padding-right: 0;
+	background: none;
+}
 .arrow_button2 a{
 	float: right;
-	background: url(Images/my_list_01.png)no-repeat -36px -144px;
-	/*width: 71px;*/
+	background: url(../Images/my_list_02.png)no-repeat -36px  0px;	
 	width: 36px;
 	height: 24px;
 }
 .arrow_button2 a:last-child{
-	background: url(Images/my_list_01.png)no-repeat 0px -144px;
-	
+	background: url(../Images/my_list_01.png)no-repeat 0px -144px;
 }
+
+
+.arrow_button2 a.active{
+	cursor: Default;
+	background: url(../Images/my_list_01.png)no-repeat -36px -144px;
+}
+.arrow_button2 a:last-child.active{
+	cursor: Default;
+	background: url(../Images/my_list_02.png)no-repeat 0px 0px;
+}
+
+
+
+
 
 .more{
 	float: right;
@@ -625,7 +686,7 @@
 	float: left;
 	width: 20px;
 	height: 38px;
-	background: url(Images/icon-slides.png)no-repeat -4px -7px;
+	background: url(../Images/icon-slides.png)no-repeat -4px -7px;
 	background-size: 10em;
 	opacity: .4;
 	cursor: pointer;
