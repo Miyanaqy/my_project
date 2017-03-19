@@ -1,0 +1,36 @@
+<form class="login" name="myForm" ng-submit="submitUser()">
+	<ul>
+		<li class="register">
+			账号注册
+		</li>
+		<li>
+			<input autocomplete="off" id="user_name" name="user_name" ng-model="name" required  type="text" placeholder="  注册用户名">
+		</li>
+		<li>
+			<input type="password" id="user_pwd" name="user_pwd" ng-model="pwd" required placeholder="  密码">
+		</li>
+		<li>
+			<input type="password" id="user_pwd2" name="user_pwd2" ng-model="pwd2" required placeholder="  确认密码">
+		</li>
+		<input class="login-button" type="submit" value="立即注册" ng-disabled="myForm.$invalid"/>
+		<li class="sign-up">
+			<a href="#/login">已经有账号了</a>
+		</li>
+
+		<li class="oth_type"><div></div><p>其他方式注册</p></li>
+		<ul class="oth_type_links">
+			<li>
+			<div></div>
+				<a href="#"></a>
+			</li>
+			<li>
+				<div></div>
+				<a href="#"></a>
+			</li>
+			<li>
+				<div></div>
+				<a href="#"></a>
+			</li>
+		</ul>
+	</ul>
+</form>
