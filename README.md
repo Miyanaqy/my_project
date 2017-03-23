@@ -11,7 +11,7 @@
 ![](example/5.gif)
 ### 4 注册用户名实时查重
 ![](example/2.gif)
-### 5 全屏轮播展示 [快速链接](http://haoniansheng.applinzi.com/MIX.html")
+### 5 全屏轮播展示 [快速链接](http://haoniansheng.applinzi.com/MIX.html)
 ![](example/2017-03-23_145254.jpg)
 ## 工作日志
 ### 2017.1.9 明星商品轮播完成
