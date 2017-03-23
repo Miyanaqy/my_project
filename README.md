@@ -1,5 +1,5 @@
 # my_project
-# 仿制小米商城
+# 仿制小米商城 [链接](http://haoniansheng.applinzi.com)
 ## 项目功能
 ### 1 页面轮播
 ![](example/1.gif)
