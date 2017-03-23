@@ -9,6 +9,9 @@
 ![](example/4.gif)
 ### 3 商品购买
 ![](example/5.gif)
+#### 进入方式 
+#### 首页的小米手机菜单
+![](example/2017-03-23_150653.jpg)
 ### 4 注册用户名实时查重
 ![](example/2.gif)
 ### 5 全屏轮播展示 [快速链接](http://haoniansheng.applinzi.com/MIX.html)
