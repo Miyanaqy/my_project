@@ -13,6 +13,7 @@
 #### 首页的小米手机菜单
 ![](example/2017-03-23_150653.jpg)
 ### 4 注册用户名实时查重
+#### 表单验证还比较简陋
 ![](example/2.gif)
 ### 5 全屏轮播展示 [快速链接](http://haoniansheng.applinzi.com/MIX.html)
 ![](example/2017-03-23_145254.jpg)
